@@ -5,8 +5,8 @@ from scripts.helpers import add_date_suffix
 from datetime import datetime, timedelta
 
 LOCAL_FILE_PATH = "/opt/airflow/data/hospitales.json"
-CONTAINER_NAME = "airflow"
-BLOB_NAME = "raw/G5/uploaded_hospitales.json"
+CONTAINER_NAME = "datalake"
+BLOB_NAME = "raw/airflow/G5/uploaded_hospitales.json"
 
 default_args = {
     'owner': 'airflow',

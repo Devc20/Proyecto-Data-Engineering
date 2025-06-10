@@ -5,9 +5,9 @@ import os
 log = logging.getLogger('airflow.task')
 
 def upload_to_adls(
-        local_file_path = "/opt/airflow/data/pacientes.csv",
-        container_name = "airflow",
-        blob_name = "raw/G05/uploaded_pacientes.csv",
+        local_file_path = "/opt/airflow/data/consultas_virtuales.json",
+        container_name = "datalake",
+        blob_name = "raw/airflow/G5/uploaded_consultas_virtuales.json",
         wasb_conn_id = "azure_blob_storage"
         ):
     try:
