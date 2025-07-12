@@ -1,3 +1,33 @@
+# PROYECTO DATA ENGINEERING
+Este proyecto implementa una arquitectura moderna de datos basada en principios de Data Mesh y el enfoque Medallion Architecture (Bronze, Silver, Gold), con el objetivo de generar productos de datos valiosos a partir de datos de telemedicina, gestión hospitalaria y análisis epidemiológico.
+
+Utilizamos Apache Airflow para la orquestación de pipelines y Azure Data Lake Storage (ADLS) como repositorio principal de datos. La transformación y análisis de los datos se realizan mediante notebooks de Databricks, organizados por dominio.
+
+## Arquitectura General
+- Orquestación: Apache Airflow (DAGs funcionales)
+- Almacenamiento: Azure Data Lake Storage (ADLS)
+- Procesamiento: Databricks Notebooks
+- Modelo de Datos: Data Mesh dividido por Dominios
+- Enfoque: Medallion Architecture (Bronze, Silver, Gold)
+
+## Dominios y Data Products
+
+### Telemedicina
+- Data Product: tmd_pacientes_riesgo
+- Notebooks: Extracción y transformación de signos vitales, historial clínico y riesgo de consultas.
+- Output: Lista de pacientes en riesgo por signos críticos o enfermedades.
+
+### Gestión Hospitalaria
+- Data Product: ghs_cobertura_hospitalaria
+- Notebooks: Mapeo de hospitales y zonas sin cobertura.
+- Output: Mapa de cobertura hospitalaria y zonas críticas.
+
+### Análisis Epidemiológico
+- Data Product: epi_analitica_enfermedades
+- Notebooks: Tendencia y distribución de enfermedades por zona.
+- Output: Alertas epidemiológicas y análisis temporal.
+
+
 # APACHE AIRFLOW WITH DOCKER
 - Airflow official documentation
 Steps: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
